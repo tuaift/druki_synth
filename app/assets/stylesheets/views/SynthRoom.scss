@@ -1,0 +1,57 @@
+.SynthRoom {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .Row {
+    display: flex;
+    height: 50vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &:not(:first-child) {
+      border-top: 3px solid white;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      width: 220px;
+      min-width: 220px;
+      height: 100%;
+      border-left: 3px solid white;
+      border-right: none;
+      overflow: scroll;
+
+      &:last-child {
+        width: 223px;
+        border-right: 3px solid white;
+      }
+
+      h1 {
+        padding: 0 20px;
+        line-height: 60px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--white);
+      }
+
+      h2 {
+        padding: 0 20px;
+        line-height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--white);
+      }
+
+      .Slider,
+      .Knob,
+      .ButtonSet {
+        // margin: 40px 0;
+        padding: 20px;
+        border-bottom: 1px solid var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.SequencerRow {
+  display: flex;
+
+  .ToggleButton {
+    width: 6.25%;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background-color: var(--black);
+    color: var(--black);
+    cursor: pointer;
+
+    &:hover:not(.active) {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    &.active {
+      font-weight: initial;
+      color: var(--dark-green);
+      background-color: var(--dark-green);
+
+      &:hover {
+        color: var(--black);
+        background-color: var(--acid-green);
+      }
+    }
+  }
+}
